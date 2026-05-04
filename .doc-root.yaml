@@ -1,4 +1,13 @@
 title: ВКР
 syntax: XML
 supportedLanguages: []
-properties: []
+properties:
+  - name: Статус
+    type: Enum
+    style: blue-green
+    icon: file-warning
+    values:
+      - Реализовано
+      - Запланировано
+      - В работе
+      - Не будет реализовано

@@ -11,3 +11,10 @@ properties:
       - Запланировано
       - В работе
       - Не будет реализовано
+  - name: Текст
+    type: Text
+    style: black
+  - name: бт1
+    type: BlockMd
+  - name: бт2
+    type: BlockMd

@@ -10,7 +10,7 @@ title: Требования
 ааа
 
 <table header="row">
-<colgroup><col width="81"/><col width="347.333"/><col width="210.333"/></colgroup>
+<colgroup><col width="81"/><col width="553.3330000000001"/></colgroup>
 <tr>
 <td>
 
@@ -22,21 +22,11 @@ ID
 Формулировка требования
 
 </td>
-<td>
-
-Связь с другими требованиями
-
-</td>
 </tr>
 <tr>
 <td>
 
-BR-01
-
-</td>
-<td>
-
-
+[BR-01](./br-01)
 
 </td>
 <td>
@@ -46,11 +36,6 @@ BR-01
 </td>
 </tr>
 <tr>
-<td>
-
-
-
-</td>
 <td>
 
 
@@ -69,7 +54,7 @@ BR-01
 ааа
 
 <table header="row">
-<colgroup><col width="81"/><col width="347.33299999999997"/><col width="213.333"/></colgroup>
+<colgroup><col width="81"/><col width="552.3330000000001"/></colgroup>
 <tr>
 <td>
 
@@ -79,11 +64,6 @@ ID
 <td>
 
 Формулировка требования
-
-</td>
-<td>
-
-Связь с другими требованиями
 
 </td>
 </tr>
@@ -98,18 +78,8 @@ BT-01
 
 
 </td>
-<td>
-
-
-
-</td>
 </tr>
 <tr>
-<td>
-
-
-
-</td>
 <td>
 
 
@@ -146,7 +116,7 @@ BT-01
 ааа
 
 <table header="row">
-<colgroup><col width="81"/><col width="347.33299999999997"/><col width="213.333"/></colgroup>
+<colgroup><col width="81"/><col width="550.333"/></colgroup>
 <tr>
 <td>
 
@@ -158,21 +128,11 @@ ID
 Формулировка требования
 
 </td>
-<td>
-
-Связь с другими требованиями
-
-</td>
 </tr>
 <tr>
 <td>
 
-BR-01
-
-</td>
-<td>
-
-
+FR-01
 
 </td>
 <td>
@@ -182,11 +142,6 @@ BR-01
 </td>
 </tr>
 <tr>
-<td>
-
-
-
-</td>
 <td>
 
 
@@ -203,6 +158,46 @@ BR-01
 ## Нефункциональные требования
 
 ааа
+
+<table header="row">
+<colgroup><col width="81"/><col width="552.3330000000001"/></colgroup>
+<tr>
+<td>
+
+ID
+
+</td>
+<td>
+
+Формулировка требования
+
+</td>
+</tr>
+<tr>
+<td>
+
+NR-01
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>
+
+
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+</table>
 
 
 

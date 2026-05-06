@@ -10,7 +10,7 @@ title: Архитектура
 таблица
 
 <table header="row">
-<colgroup><col width="147"/><col width="213.333"/><col width="213.333"/></colgroup>
+<colgroup><col width="147"/><col width="213.333"/><col width="269.33299999999997"/></colgroup>
 <tr>
 <td>
 
@@ -134,110 +134,6 @@ title: Архитектура
 </tr>
 </table>
 
-таблица взаимодействия модулей
+а
 
-<table header="both">
-<colgroup><col width="72"/><col width="75.333"/><col width="440.33299999999997"/></colgroup>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-<tr>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-<td>
-
-
-
-</td>
-</tr>
-</table>
+<drawio path="./arkhitektura-2.svg" width="211px" height="101px"/>

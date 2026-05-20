@@ -1,6 +1,6 @@
 ---
-order: 1.5
-title: Архитектура ПО
+order: 8
+title: (старая версия) Архитектура ПО
 ---
 
 Схема архитектуры
@@ -281,14 +281,14 @@ Service/IReportGenerator.cs
 
    | **Тип** | **Пример payload** | **Куда вставляется** | **Признак уязвимости** |
    |---------|--------------------|----------------------|------------------------|
-   |         |                    |                      | SQLi                   | `' OR '1'='1` |
-   |         |                    |                      | XSS (Reflected)        | `<script>alert(1)</script>` |
-   |         |                    |                      | Path Traversal         | `../../../etc/passwd` |
-   |         |                    |                      | NoSQL Injection        | `{"$gt": ""}` |
-   |         |                    |                      | XXE                    | `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM "`[`file:///etc/passwd">]><root>&test;</root>`](file:///etc/passwd">]><root>&test;</root>) |
-   |         |                    |                      | SSTI                   | `{{7*7}}` |
-   |         |                    |                      | Long string            | `A`\*100000 |
-   |         |                    |                      | Null byte injection    | `%00` |
+   |         |                    |                      | SQLi                   |
+   |         |                    |                      | XSS (Reflected)        |
+   |         |                    |                      | Path Traversal         |
+   |         |                    |                      | NoSQL Injection        |
+   |         |                    |                      | XXE                    |
+   |         |                    |                      | SSTI                   |
+   |         |                    |                      | Long string            |
+   |         |                    |                      | Null byte injection    |
 
 **Алгоритм для одного эндпоинта:**
 

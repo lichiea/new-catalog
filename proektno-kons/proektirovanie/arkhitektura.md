@@ -7,6 +7,14 @@ title: Архитектура ПО
 
 <drawio path="./arkhitektura.svg" width="211px" height="101px"/>
 
+
+
+Схема архитектуры плантюмл
+
+<plant-uml path="./arkhitektura.puml" width="1745px" height="850px"/>
+
+
+
 Таблица модулей и реализующих их файлов
 
 <table header="row">
@@ -120,6 +128,18 @@ Service/IAuthService.cs
 <tr>
 <td>
 
+Модуль логирования (МЛ)
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>
+
 Модуль формирования отчетных материалов (МФОМ)
 
 </td>
@@ -210,7 +230,7 @@ Service/IReportGenerator.cs
 
 
 
--  <highlight color="peony">Модуль нагрузочного тестирования (МНТ).</highlight> 
+-  <highlight color="peony">Модуль нагрузочного тестирования (МНТ).</highlight>
 
 Алгоритм:
 
@@ -259,16 +279,16 @@ Service/IReportGenerator.cs
 
    **Типы атак и соответствующие payload'ы:**
 
-   | **Тип** | **Пример payload**  | **Куда вставляется**                                                                                                                                  | **Признак уязвимости**                       |
-   |---------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-   |         | SQLi                | `' OR '1'='1`                                                                                                                                         | Параметры запроса, тело JSON                 | Ошибка SQL в ответе, неожиданный статус 200, задержка |
-   |         | XSS (Reflected)     | `<script>alert(1)</script>`                                                                                                                           | Параметры, тело                              | Строка присутствует в ответе без экранирования |
-   |         | Path Traversal      | `../../../etc/passwd`                                                                                                                                 | Параметры пути (path)                        | В ответе содержится файл (/etc/passwd) |
-   |         | NoSQL Injection     | `{"$gt": ""}`                                                                                                                                         | Тело JSON                                    | Изменённое поведение (например, возвращены все записи) |
-   |         | XXE                 | `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM "`[`file:///etc/passwd">]><root>&test;</root>`](file:///etc/passwd">]><root>&test;</root>) | Тело запроса с Content-Type: application/xml | В ответе содержимое /etc/passwd |
-   |         | SSTI                | `{{7*7}}`                                                                                                                                             | Параметры                                    | В ответе 49 или ошибка шаблонизатора |
-   |         | Long string         | `A`\*100000                                                                                                                                           | Любой параметр                               | Статус 500 или 413 (Payload Too Large) |
-   |         | Null byte injection | `%00`                                                                                                                                                 | Параметры                                    | Обрезка строки или ошибка |
+   | **Тип** | **Пример payload** | **Куда вставляется** | **Признак уязвимости** |
+   |---------|--------------------|----------------------|------------------------|
+   |         |                    |                      | SQLi                   | `' OR '1'='1` |
+   |         |                    |                      | XSS (Reflected)        | `<script>alert(1)</script>` |
+   |         |                    |                      | Path Traversal         | `../../../etc/passwd` |
+   |         |                    |                      | NoSQL Injection        | `{"$gt": ""}` |
+   |         |                    |                      | XXE                    | `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM "`[`file:///etc/passwd">]><root>&test;</root>`](file:///etc/passwd">]><root>&test;</root>) |
+   |         |                    |                      | SSTI                   | `{{7*7}}` |
+   |         |                    |                      | Long string            | `A`\*100000 |
+   |         |                    |                      | Null byte injection    | `%00` |
 
 **Алгоритм для одного эндпоинта:**
 
@@ -383,3 +403,9 @@ public class Vulnerability
 3. Сгенерировать cURL команды для каждой уязвимости (воспроизведение).
 4. Сохранить HTML в файл.
 ```
+
+
+
+
+
+<plant-uml path="./arkhitektura-2.puml" width="486px" height="1084px"/>

@@ -1,0 +1,65 @@
+@startuml ProofAPI_Architecture
+!theme plain
+
+skinparam component {
+  BackgroundColor White
+  BorderColor #333333
+  FontName Arial
+}
+
+package "Presentation Layer" {
+  component MainWindow as UI
+  component MainWindowViewModel as ViewModel
+}
+
+package "Application Layer" {
+  component TestOrchestrator as Orchestrator
+  component TestManager
+  component LoadTestService
+  component SecurityTestService
+  component PayloadGenerator
+  component DataImportService
+  component AuthService
+  component ReportGenerator
+  component LoggingService
+}
+
+package "Infrastructure Layer" {
+  component DatabaseService
+  component "Microsoft.OpenApi.Readers" as OpenApiLib
+  component "System.Net.Http" as HttpClient
+}
+
+cloud "External API\n(тестируемая система)" as TargetAPI
+
+database "SQLite\nProofAPI.db" as DB
+
+' Связи
+UI -down-> ViewModel : DataContext
+
+ViewModel -down-> DataImportService : IDataImportService
+ViewModel -down-> AuthService : IAuthService
+ViewModel -down-> Orchestrator : ITestOrchestrator
+
+Orchestrator -down-> TestManager : ITestManager
+Orchestrator -down-> LoadTestService : ILoadTestService
+Orchestrator -down-> SecurityTestService : ISecurityTestService
+Orchestrator -down-> ReportGenerator : IReportGenerator
+Orchestrator -down-> DatabaseService : IDatabaseService
+
+LoadTestService -down-> AuthService : IAuthService
+LoadTestService -down-> HttpClient : выполняет запросы
+LoadTestService -down-> LoggingService : ILoggingService
+
+SecurityTestService -down-> AuthService : IAuthService
+SecurityTestService -down-> PayloadGenerator : IPayloadGenerator
+SecurityTestService -down-> HttpClient
+SecurityTestService -down-> LoggingService
+
+DatabaseService -down-> DB : Entity Framework Core
+
+DataImportService -down-> OpenApiLib : парсинг YAML/JSON
+
+HttpClient -left-> TargetAPI : HTTP/HTTPS
+
+@enduml
